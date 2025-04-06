@@ -11,7 +11,7 @@ import Account from "./components/Account.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
+<Route path="/" element={<App />}>
       <Route index element={<Home />} /> {/* ✅ Shorthand for Home */}
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
