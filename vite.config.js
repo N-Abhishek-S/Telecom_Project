@@ -1,19 +1,16 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
 export default defineConfig({
-  base: '/Telecom_Project/', // ✅ Important for GitHub Pages
-   plugins: [react()],
-    build: {
-      outDir: 'dist',
-      emptyOutDir: true,
-      assetsInlineLimit: 0,
-      assetsDir: 'assets',  
-    },
-    server: {
-      historyApiFallback: true,
-    },
-    optimizeDeps: {
-      exclude: ['*.jpg', '*.png'], // Don't optimize external images
-    }
-});
+  base: '/Telecom_Project/',
+  plugins: [react()],
+  build: {
+    outDir: 'build',
+    emptyOutDir: true,
+    // assetsInlineLimit: 0,  // Only needed if having asset issues
+    assetsDir: 'assets',
+    minify: 'terser'  // Better minification
+  },
+  server: {
+    historyApiFallback: true,
+    open: true  // Opens browser on dev
+  }
+  // optimizeDeps is usually not needed for images
+})

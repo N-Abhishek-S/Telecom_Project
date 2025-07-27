@@ -1,14 +1,14 @@
 {
-"homepage": "https://n-abhishek-s.github.io/Telecom_Project",
+  "homepage": "https://n-abhishek-s.github.io/Telecom_Project",
   "name": "tel",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "vite build",
+"build": "vite build && echo '' > build/.nojekyll",
     "lint": "eslint .",
     "preview": "vite preview"
   },
