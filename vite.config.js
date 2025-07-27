@@ -16,7 +16,16 @@ export default defineConfig({
   server: {
     historyApiFallback: true,
     port: 3000,
-    open: true
+    open: true,
+    hmr: {
+      protocol: 'ws',
+      host: 'localhost',
+      port: 5173,
+      clientPort: 5173
+    },
+    watch: {
+      usePolling: true // Helpful for some WSL environments
+    }
   },
   resolve: {
     alias: {
