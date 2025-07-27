@@ -1,11 +1,9 @@
-import { defineConfig } from 'vite';  // Make sure this import exists
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
 
-// Add this if you're using ES modules
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   base: '/Telecom_Project/',
@@ -17,10 +15,13 @@ export default defineConfig({
   },
   server: {
     historyApiFallback: true,
+    port: 3000,
+    open: true
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')  // Optional but helpful
+      '@': path.resolve(__dirname, './src'),
+      '~': path.resolve(__dirname, './public')
     }
   }
 });
