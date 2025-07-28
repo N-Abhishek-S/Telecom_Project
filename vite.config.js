@@ -9,7 +9,7 @@ export default defineConfig({
   base: '/Telecom_Project/',
   plugins: [react()],
   build: {
-    outDir: 'build',
+    outDir: 'dist', 
     emptyOutDir: true,
     assetsDir: 'assets',
   },

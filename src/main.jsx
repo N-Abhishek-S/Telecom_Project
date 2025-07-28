@@ -11,16 +11,16 @@ import Account from "./components/Account.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-<HashRouter basename="/Telecom_Project">
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="plans" element={<Plans />} />
-          <Route path="account" element={<Account />} />
-        </Route>
-      </Routes>
-    </HashRouter>
+<HashRouter>
+  <Routes>
+    <Route path="/" element={<App />}>
+      <Route index element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="contact" element={<Contact />} />
+      <Route path="plans" element={<Plans />} />
+      <Route path="account" element={<Account />} />
+    </Route>
+  </Routes>
+</HashRouter>
   </StrictMode>
 );
