@@ -11,7 +11,7 @@ import Account from "./components/Account.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <HashRouter>
+<HashRouter basename="/Telecom_Project">
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
